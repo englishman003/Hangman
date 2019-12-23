@@ -1,0 +1,92 @@
+/////////////////////////////////
+// Base
+html {
+
+    font-family: Roboto Condensed, Lato, Century Gothic, Verdana, Sans-Serif;
+
+}
+
+.gameTitle{
+    font-size: 12rem;
+    font-family: Hobo STD, Berlin Sans FB, Roboto Condensed, Urban Jungle, Bree Serifl, sans-serif;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+.Alphabet{
+    font-size: 1.5rem;
+    font-variant: small-caps;
+}
+
+.Letter{
+    text-align: center;
+    font-family: Roboto Condensed, Berlin Sans FB, Urban Jungle, Bree Serif;
+    font-weight: bolder;
+}
+
+.userWord{
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 2rem;
+    font-family: Bree Serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.userLetter{
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 2rem;
+    font-family: Roboto Condensed;
+    font-weight: bold;
+    text-align: center;
+}
+
+.start{
+    color: rgba(255, 255, 255, 0.9);
+    font-family: Roboto Condensed;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.restart{
+    color: rgba(255, 255, 255, 0.9);
+    font-family: Roboto Condensed;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.warning, .Warning2, .Warning3{
+    font-family: Roboto Condensed;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+ }
+
+ .Message{
+    font-family: Roboto Condensed;
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, .75);
+    text-align: center;
+ }
+ 
+    .gameHelp {
+    
+        text-align: center;
+        color: rgba(236, 54, 255, .8);
+        font-family: Roboto Condensed;
+        font-size: 1.6rem;
+        font-weight: bolder;
+        
+ }
+
+ .mysteryWord{
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 3.5rem;
+    font-family: Bree Serif, Roboto Condensed;
+    font-weight: bolder;
+    text-align: center;
+ }

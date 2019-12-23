@@ -1,0 +1,40 @@
+{
+  "name": "hangman",
+  "version": "1.0.0",
+  "description": "Hangman Game",
+  "main": "hangman.js",
+  "scripts": {
+    "WatchSass": "node-sass SCSS/Main/main.scss CSS/hangman.css -w",
+    "DevServer": "live-server",
+    "Start": "npm-run-all --parallel DevServer WatchSass",
+    "CompileSass": "node-sass SCSS/Main/main.scss CSS/hangman.comp.css",
+    "ConcatCSS": "concat -o CSS/hangman.concat.css SCSS/Vendors/Animate.css SCSS/Vendors/Normalize.css CSS/hangman.comp.css",
+    "PrefixCSS": "postcss --use=autoprefixer -b \"last 20 versions\" CSS/hangman.concat.css -o CSS/hangman.prefix.css",
+    "CompressCSS": "node-sass CSS/hangman.prefix.css CSS/hangman.css --output-style compressed",
+    "BuildCSS": "npm-run-all CompileSass ConcatCSS PrefixCSS CompressCSS"
+  },
+  "keywords": [
+    "Hangman",
+    "Family",
+    "Game",
+    "Fun"
+  ],
+  "author": "Nathan Cluff",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.7.3",
+    "concat": "^1.0.3",
+    "node-sass": "^4.13.0",
+    "node.js": "0.0.0",
+    "npm-run-all": "^4.1.5",
+    "php": "0.0.1",
+    "postcss-cli": "^6.1.3",
+    "postcss-import": "^12.0.1"
+  },
+  "browserslist": [
+    "last 20 versions"
+  ],
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
+}

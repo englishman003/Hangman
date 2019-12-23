@@ -1,0 +1,88 @@
+@media (max-width: 1350px){
+
+    .start, .restart{
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (max-width: 1275px){
+   
+    .gameArea, .gameTitle, .mysteryWord, .Alphabet{
+        grid-column: 6 / span 14;
+    }
+
+    .gameArea .gallowsHolder .gallows .hangingBody .body .torso .lArm .LeftArm{
+            transform: translateX(3rem) rotate(-45deg);
+        }
+
+        .userWord, .userLetter{
+            font-size: 1.6rem;
+        }
+    
+}
+
+@media (max-width: 1050px){
+    .gameArea .gallowsHolder .gallows .hangingBody .body .torso .lArm .LeftArm{
+        transform: translateX(2.5rem) rotate(-45deg);
+    }
+    .gameArea .gallowsHolder .gallows .hangingBody .body .hips .rLeg{
+        transform: translateX(-.5rem) translateY(-.8rem)rotate(45deg);
+    }
+    .gameArea .gallowsHolder .gallows .hangingBody .body .hips .lLeg{
+        transform: translateX(1rem) translateY(-.8rem)rotate(-45deg);
+    }
+}
+
+@media (max-width: 925px){
+    .gameArea .gallowsHolder .gallows .hangingBody .body .torso .lArm .LeftArm{
+        width: 80%;
+        transform: translateX(1.5rem) rotate(-45deg);
+    }
+     .gameArea .gallowsHolder .gallows .hangingBody .body .torso .rArm .RightArm{
+        width: 80%;
+        transform: translateX(-.3rem) rotate(45deg);
+    }
+
+    .gameArea .gallowsHolder .gallows .hangingBody .body .hips .rLeg{
+        transform: translateX(-.5rem) translateY(-.8rem)rotate(45deg);
+    }
+    .gameArea .gallowsHolder .gallows .hangingBody .body .hips .lLeg{
+        transform: translateX(1rem) translateY(-.8rem)rotate(-45deg);
+    }
+
+    .userWord, .userLetter{
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 850px){
+    .gameArea, .gameTitle, .mysteryWord, .Alphabet{
+        grid-column: 4 / span 18;
+    }
+}
+
+@media (max-width: 600px){
+
+    .gameTitle{
+        font-size:  9rem;
+    }
+
+    .userWord, .userLetter{
+        font-size: 1.4rem;
+    }
+
+    .gameArea, .gameTitle, .mysteryWord, .Alphabet{
+        grid-column: 2 / span 22;
+
+        .start, .restart{
+            font-size: 1.2rem;
+        }
+    }
+    .gameArea .gallowsHolder .gallows .hangingBody .body .hips .rLeg{
+        transform: translateX(-.25rem) translateY(-1.5rem)rotate(45deg);
+    }
+    .gameArea .gallowsHolder .gallows .hangingBody .body .hips .lLeg{
+        transform: translateX(1.25rem) translateY(-1.5rem)rotate(-45deg);
+    }
+}

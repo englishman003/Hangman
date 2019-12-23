@@ -1,0 +1,318 @@
+#gridDesktop{
+    border: 1.5rem solid rgba(white, .75);
+}
+
+.gameTitle{
+    position: relative;
+    display:  grid;
+    align-content: center;
+    justify-content: center;
+    
+    padding: 1%;
+}
+
+.Alphabet{
+    position: relative;
+    display: grid;
+    @include gridLayout(100%, 100%, repeat(13, 1fr), repeat(2, 1fr), 0, 0);
+    @include gridPlacement(13, 13, 2, 2);
+    align-content: center;
+    justify-content: center;
+}
+
+.Letter{
+    background-color: rgba(236, 54, 255, .6);
+    border: .3rem outset rgba(51, 51, 51, 0.5);
+    border-radius: .5rem;
+    margin-top: 5%;
+    margin-left: 5%;
+    &:active{
+        background-color: rgba(244, 145, 254, .8);
+        border: .3rem inset rgba(255, 255, 255, 0.5);
+    }
+}
+
+.gameArea {
+    
+    position: relative;
+    margin-top: 2%;    
+    align-content: center;
+    justify-content: center;
+    
+    display: grid;
+    @include gridLayout(100%, 100%, 1fr 30%, 1fr, 0, 0);
+    @include gridPlacement(2,2,1,1);    
+    border: 1.5rem solid rgba(255, 255, 255, 0.75);
+
+    .gallowsHolder {
+    
+        position: relative;
+        display: grid;
+        @include gridLayout(100%, 100%, 1fr 60% 1fr, 5% 80% 1fr, 0 , 0);
+        @include gridPlacement(3,3,3,3);
+        align-content: center;
+        justify-content: center;
+        border-right: 1rem dashed rgba(255, 255, 255, 0.5);
+     
+        .gallows {
+        
+            position: relative;
+            
+            display: grid;
+            @include gridLayout(100%, 100%, 10% repeat(2, 45%), 10% 75% 15%, 0, 0);
+            @include gridPlacement(3,3,3,3);
+            align-content: center;
+            justify-content: center;            
+            border-bottom: .8rem solid white;
+            
+            .crossBar {
+                border-bottom: .8rem solid white;
+            }
+            .support {                
+                border-right: .8rem solid white;
+            }
+            .hangingBody {
+    
+                display:  grid;
+                @include gridLayout(100%, 100%, repeat(4, 1fr), 10% repeat(4,1fr), 0 ,0);
+                @include gridPlacement(4,4,5,5);
+
+                .rope{
+                    display: grid;
+                    border-right: .8rem solid white;
+                }
+
+                .body{
+                    display: grid;
+                    @include gridLayout(100%, 100%, 1fr 5%, repeat(3,1fr), 0, 0);
+                    @include gridPlacement(2,2,3,3);
+
+                    .head {
+    
+                        display: grid;
+                        border: .8rem solid white;
+                        border-radius: 10rem;
+                        
+                        height: 100%;
+                        width: 50%;
+                        margin: -.4rem  auto;
+                        
+                    }
+
+                    .torso {
+    
+                        display: grid;
+                        @include gridLayout(100%, 100%, 47% 1% 1fr, 1fr, 0, 0);
+                        @include gridPlacement(3,3,1,1);
+                        margin-top: -.5rem;
+
+                        .lArm{
+                            .LeftArm {
+        
+                                position: relative;
+                                display: grid;
+                                height: 20%;
+                                width: 60%;
+                                border-top: .8rem solid white;
+                                transform: translateX(3.1rem) rotate(-45deg);
+                                margin-top: 1.5rem;
+                                
+                            }
+                        }
+
+                        
+                        .spine {
+                            
+                            display: grid;
+                            border: .4rem solid white;
+                            
+                        }
+                        .rArm{
+                            .RightArm {
+                            
+                             position: relative;
+                            display: grid;
+                            height: 20%;
+                            width: 60%;
+                            border-top: .8rem solid white;
+                            transform: translateX(-.5rem) rotate(45deg);
+                            margin-top: 1.5rem;
+                            
+                            }
+                        }
+                        
+                        
+                    }
+
+                    .hips {
+    
+                        display: grid;
+                        @include gridLayout(100%, 100%, repeat(2, 1fr), 1fr, 0, 0);
+                        @include gridPlacement(2,2,1,1);
+                        margin-top: -.3rem;
+
+                        .lLeg{
+                            position: relative;
+                            display: grid;
+                            height: 20%;
+                            width: 90%;
+                            border-top: .8rem solid white;
+                            transform: translateX(1.5rem) translateY(-.4rem)rotate(-45deg);
+                            margin-top: 1.5rem;
+                            
+                            
+                        }
+                        
+                        .rLeg {
+                            position: relative;
+                            display: grid;
+                            height: 20%;
+                            width: 90%;
+                            border-top: .8rem solid white;
+                            transform: translateX(-.7rem) translateY(-.4rem)rotate(45deg);
+                            margin-top: 1.5rem;
+                        }
+                        
+                    }
+                }
+                
+            }
+        }
+    }
+
+    .userInteraction {
+        
+        display: grid;
+        @include gridLayout(100%, 100%, 1fr, 40% 20% 40%, 0, 0);
+        @include gridPlacement(1,1,3,3);
+        outline: none;
+        caret-color: rgba(236, 54, 255, 1);
+
+        .userWord {
+    
+            display: grid;            
+            height: 40%;
+            width: 80%;
+            
+            align-self: end;
+            justify-self: center;
+            
+            background-color: transparent;
+            border-color: transparent;
+            outline: none;
+                
+        }
+        
+        .userWord::placeholder,
+        .userLetter::placeholder {
+            
+            color: rgba(255, 255, 255, 0.95);
+            
+        }
+        
+        .userLetter {
+            
+            display: grid;
+            height: 40%;
+            width: 80%;
+            
+            align-self: end;
+            justify-self: center;
+            
+            background-color: transparent;
+            border-color: transparent;
+            outline: none;
+            
+        }
+
+        .start {
+    
+            display: grid;             
+             height: 40%;
+             width: 80%;
+             
+             align-self: start;
+             justify-self: center;
+             display: block;
+             
+             border-radius: 1rem;
+             background-color: transparent;
+             border: .4rem outset rgba(236, 54, 255, .6);
+             
+            &:hover{
+                background-color: rgba(236, 54, 255, .6);
+            }
+
+            &:active{
+              border: .4rem inset rgba(236, 54, 255, .6);
+            }
+
+         }
+         
+         .restart {
+             
+            display: grid;             
+             height: 40%;
+             width: 80%;
+             
+             align-self: start;
+             justify-self: center;
+             display: block;
+             
+             border-radius: 1rem;
+             background-color: transparent;
+             border: .4rem outset rgba(236, 54, 255, .6);
+
+             &:hover{
+                background-color: rgba(236, 54, 255, .6);
+             }
+
+             &:active{
+                border: .4rem inset rgba(236, 54, 255, .6);
+             }
+             
+         }
+
+         .warning, .Warning2, .Warning3{
+            display: grid;
+            align-self: start;
+            justify-self: center;
+         }
+
+         .Message{
+            display: grid;
+            align-self: start;
+            justify-self: center;
+         }
+
+         .gameHelp{
+            display: none;            
+            height: 80%;
+            width:100%;
+            align-self: start;
+            justify-self: center;
+            margin-top: 10%;
+            border-radius: 1rem;
+            background-color: transparent;
+            padding: .75rem;
+         }
+        
+    }
+
+    .mysteryWord {
+        position: relative;
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        border-left: 1.6rem solid rgba(255, 255, 255, 0.75);
+        border-right: 1.6rem solid rgba(255, 255, 255, 0.75);
+        border-bottom: 1.6rem solid rgba(255, 255, 255, 0.75);
+        
+        .spacer {
+        clear: both;
+         }
+    }
+    
+
+    
+}
